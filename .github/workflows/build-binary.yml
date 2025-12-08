@@ -41,7 +41,7 @@ jobs:
         echo "Checking jsvms installation:"
         ls -la node_modules/jsvms/ || echo "jsvms directory not found!"
 
-    - name: Verify dependencies
+    - name: sfed
       run: |
         echo "Verifying required modules..."
         node -e "try { require('jsvms/protocols/vmess/server'); console.log('✓ jsvms/protocols/vmess/server found'); process.exit(0); } catch(e) { console.error('✗ jsvms/protocols/vmess/server NOT found'); process.exit(1); }"
